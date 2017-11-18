@@ -29,6 +29,7 @@ extension UIColor {
 }
 
 extension UIFont {
-	
+	static let boldBody = UIFont.boldSystemFont(ofSize: 17)
+	static let body = UIFont.systemFont(ofSize: 17)
 }
 

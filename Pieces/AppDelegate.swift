@@ -30,8 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		window = UIWindow()
 		window?.makeKeyAndVisible()
 		
-		let companiesController = ViewController()
-		let navController = CustomNavigationController(rootViewController: companiesController)
+		let mainVC = MemoListVC()
+		let navController = CustomNavigationController(rootViewController: mainVC)
 		window?.rootViewController = navController
 		
 		return true
