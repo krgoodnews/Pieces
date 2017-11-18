@@ -30,10 +30,7 @@ class CreateMemoView: YSView {
 		addSubview(titleLabel)
 		addSubview(textView)
 		
-		daisyBackgroundView.snp.remakeConstraints { make -> Void in
-			make.top.left.right.equalTo(self)
-			make.height.equalTo(50)
-		}
+		changeDaisyViewHeight(50)
 
 		
 		titleLabel.snp.remakeConstraints { make -> Void in
@@ -47,6 +44,13 @@ class CreateMemoView: YSView {
 			make.top.equalTo(daisyBackgroundView).offset(6)
 			make.bottom.right.equalTo(daisyBackgroundView)
 			make.left.equalTo(titleLabel.snp.right)
+		}
+	}
+	
+	func changeDaisyViewHeight(_ height: CGFloat) {
+		daisyBackgroundView.snp.remakeConstraints { make -> Void in
+			make.top.left.right.equalTo(self)
+			make.height.equalTo(height)
 		}
 	}
 	
