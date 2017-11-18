@@ -12,10 +12,9 @@ import SnapKit
 
 class CreateMemoVC: UIViewController {
 	
-	let textLabel = UILabel().then {
-		$0.text = "Letters"
-		$0.font = .boldBody
-	}
+	// MARK: View
+	let displayView = CreateMemoView()
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -24,7 +23,6 @@ class CreateMemoVC: UIViewController {
 		
 		setupNavi()
 		setupView()
-		
 	}
 	
 	private func setupNavi() {
@@ -33,26 +31,9 @@ class CreateMemoVC: UIViewController {
 	}
 	
 	private func setupView() {
-		let daisyBackgroundView = setupBackgroundView(height: 50)
-		let textView = UITextView().then {
-			$0.backgroundColor = .clear
-			$0.font = .body
-		}
 		
-		view.addSubview(textLabel)
-		view.addSubview(textView)
-		textLabel.snp.remakeConstraints { make -> Void in
-			make.top.equalTo(daisyBackgroundView)
-			make.left.equalTo(daisyBackgroundView).offset(16)
-			make.width.equalTo(100)
-			make.height.equalTo(50)
-		}
-		textView.snp.remakeConstraints { make -> Void in
-			make.top.bottom.right.equalTo(daisyBackgroundView)
-			make.left.equalTo(textLabel.snp.right)
-		}
-
-
+		
+		view = displayView
 	}
 	
 	@objc private func didTapClose() {
