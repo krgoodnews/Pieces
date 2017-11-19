@@ -13,6 +13,7 @@
 		EF93CAED1FBFD8850057ED46 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93CAEC1FBFD8850057ED46 /* Memo.swift */; };
 		EF93CAEF1FBFE0CC0057ED46 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93CAEE1FBFE0CC0057ED46 /* MemoCell.swift */; };
 		EF93CAF11FBFE1640057ED46 /* YSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93CAF01FBFE1640057ED46 /* YSTableViewCell.swift */; };
+		EF93CAF31FC14CE20057ED46 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93CAF21FC14CE20057ED46 /* Date+.swift */; };
 		EF9761C31FBFBB0A0099CABF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9761C21FBFBB0A0099CABF /* AppDelegate.swift */; };
 		EF9761C51FBFBB0A0099CABF /* MemoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9761C41FBFBB0A0099CABF /* MemoListVC.swift */; };
 		EF9761C81FBFBB0A0099CABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF9761C61FBFBB0A0099CABF /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		EF93CAEC1FBFD8850057ED46 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		EF93CAEE1FBFE0CC0057ED46 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		EF93CAF01FBFE1640057ED46 /* YSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSTableViewCell.swift; sourceTree = "<group>"; };
+		EF93CAF21FC14CE20057ED46 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		EF9761BF1FBFBB0A0099CABF /* Pieces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pieces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9761C21FBFBB0A0099CABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF9761C41FBFBB0A0099CABF /* MemoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListVC.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		EF93CAE51FBFC7950057ED46 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				EF93CAF21FC14CE20057ED46 /* Date+.swift */,
 				EF93CAE31FBFC73A0057ED46 /* UIViewController+.swift */,
 				EF9761D61FBFBC670099CABF /* UIColor+.swift */,
 			);
@@ -230,6 +233,7 @@
 				EF93CAE71FBFCF8A0057ED46 /* CreateMemoView.swift in Sources */,
 				EF93CAEF1FBFE0CC0057ED46 /* MemoCell.swift in Sources */,
 				EF9761C51FBFBB0A0099CABF /* MemoListVC.swift in Sources */,
+				EF93CAF31FC14CE20057ED46 /* Date+.swift in Sources */,
 				EF9761E11FBFC4F30099CABF /* CreateMemoVC.swift in Sources */,
 				EF93CAE41FBFC73A0057ED46 /* UIViewController+.swift in Sources */,
 				EF9761D71FBFBC670099CABF /* UIColor+.swift in Sources */,

@@ -18,6 +18,22 @@ protocol CreateMemoDelegate {
 class CreateMemoVC: UIViewController {
 	
 	var delegate: CreateMemoDelegate?
+	var memo: Memo?
+	
+	var memoType: MemoType? {
+		didSet {
+			guard let type = memoType else { return }
+			switch type {
+			case .Text:
+				navigationItem.title = "Write piece"
+			case .Image:
+				navigationItem.title = "Paint piece"
+			default:
+				navigationItem.title = "Create memo"
+			}
+		}
+	}
+	
 	
 	// MARK: View
 	let displayView = CreateMemoView()
@@ -35,18 +51,31 @@ class CreateMemoVC: UIViewController {
 	}
 	
 	@objc private func didTapSave() {
-		createCompany()
+		createMemo()
 	}
-	private func createCompany() {
-		print("trying create memo")
-		let memo = Memo(text: displayView.textView.text)
+	private func createMemo() {
+		print("---trying create memo...")
+		guard let type = memoType else { return }
+	
+		switch type {
+		case .Text:
+			guard displayView.textView.text.count != 0 else {
+				print("Text를 입력해주세요.")
+				return
+			}
+			let text = displayView.textView.text!
+			self.memo = Memo(.Text, text: text)
+		default:
+			break
+		}
+		
 		
 		self.dismiss(animated: true) {
+			guard let memo = self.memo else { return }
 			self.delegate?.didAddMemo(memo: memo)
 		}
 	}
 	private func setupNavi() {
-		navigationItem.title = "Write your piece"
 		setupCancelButton()
 	}
 	

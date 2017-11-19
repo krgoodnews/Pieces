@@ -16,6 +16,7 @@ class MemoCell: YSTableViewCell {
 	var memo: Memo? {
 		didSet {
 			titleLabel.text = memo?.text
+			dateLabel.text = memo?.createDate?.toString()
 		}
 	}
 	
