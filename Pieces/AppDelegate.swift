@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.daisy]
 		UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.daisy]
 		
+		UINavigationBar.appearance().shadowImage = UIImage()
 		
 		// 초기세팅
 		window = UIWindow()
