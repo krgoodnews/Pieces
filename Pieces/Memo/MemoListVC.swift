@@ -15,6 +15,9 @@ class MemoListVC: UITableViewController {
 	var memos: [Memo] = []
 	let cellID = "memoCellID"
 	
+	
+	// MARK: View
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -24,8 +27,8 @@ class MemoListVC: UITableViewController {
 		navigationItem.rightBarButtonItem = addButton
 		
 		tableView.backgroundColor = .stem
-		
-		tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+//		tableView.separatorStyle = .none
+		tableView.register(MemoCell.self, forCellReuseIdentifier: cellID)
  	}
 	
 	@objc private func didTapAdd() {
@@ -43,16 +46,14 @@ class MemoListVC: UITableViewController {
 		return memos.count
 	}
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+		let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! MemoCell
 		let memo = memos[indexPath.row]
-		cell.backgroundColor = .daisy
 		
-		cell.textLabel?.text = memo.text
-		cell.textLabel?.numberOfLines = 0
+		cell.memo = memo
 		
 		return cell
 	}
-	
+
 }
 
 extension MemoListVC: CreateMemoDelegate {

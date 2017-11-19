@@ -51,8 +51,7 @@ class CreateMemoVC: UIViewController {
 	}
 	
 	private func setupView() {
-		
-		
+
 		view = displayView
 	}
 	
@@ -60,4 +59,6 @@ class CreateMemoVC: UIViewController {
 		dismiss(animated: true, completion: nil)
 	}
 	
+	
+
 }

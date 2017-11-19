@@ -11,6 +11,8 @@
 		EF93CAE71FBFCF8A0057ED46 /* CreateMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93CAE61FBFCF8A0057ED46 /* CreateMemoView.swift */; };
 		EF93CAEA1FBFCFA80057ED46 /* YSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93CAE91FBFCFA80057ED46 /* YSView.swift */; };
 		EF93CAED1FBFD8850057ED46 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93CAEC1FBFD8850057ED46 /* Memo.swift */; };
+		EF93CAEF1FBFE0CC0057ED46 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93CAEE1FBFE0CC0057ED46 /* MemoCell.swift */; };
+		EF93CAF11FBFE1640057ED46 /* YSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93CAF01FBFE1640057ED46 /* YSTableViewCell.swift */; };
 		EF9761C31FBFBB0A0099CABF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9761C21FBFBB0A0099CABF /* AppDelegate.swift */; };
 		EF9761C51FBFBB0A0099CABF /* MemoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9761C41FBFBB0A0099CABF /* MemoListVC.swift */; };
 		EF9761C81FBFBB0A0099CABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF9761C61FBFBB0A0099CABF /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 		EF93CAE61FBFCF8A0057ED46 /* CreateMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMemoView.swift; sourceTree = "<group>"; };
 		EF93CAE91FBFCFA80057ED46 /* YSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSView.swift; sourceTree = "<group>"; };
 		EF93CAEC1FBFD8850057ED46 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		EF93CAEE1FBFE0CC0057ED46 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
+		EF93CAF01FBFE1640057ED46 /* YSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSTableViewCell.swift; sourceTree = "<group>"; };
 		EF9761BF1FBFBB0A0099CABF /* Pieces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pieces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9761C21FBFBB0A0099CABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF9761C41FBFBB0A0099CABF /* MemoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListVC.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				EF93CAE91FBFCFA80057ED46 /* YSView.swift */,
+				EF93CAF01FBFE1640057ED46 /* YSTableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -78,10 +83,11 @@
 		EF93CAEB1FBFD7E30057ED46 /* Memo */ = {
 			isa = PBXGroup;
 			children = (
+				EF93CAEC1FBFD8850057ED46 /* Memo.swift */,
+				EF93CAEE1FBFE0CC0057ED46 /* MemoCell.swift */,
 				EF9761C41FBFBB0A0099CABF /* MemoListVC.swift */,
 				EF9761E01FBFC4F30099CABF /* CreateMemoVC.swift */,
 				EF93CAE61FBFCF8A0057ED46 /* CreateMemoView.swift */,
-				EF93CAEC1FBFD8850057ED46 /* Memo.swift */,
 			);
 			path = Memo;
 			sourceTree = "<group>";
@@ -222,11 +228,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF93CAE71FBFCF8A0057ED46 /* CreateMemoView.swift in Sources */,
+				EF93CAEF1FBFE0CC0057ED46 /* MemoCell.swift in Sources */,
 				EF9761C51FBFBB0A0099CABF /* MemoListVC.swift in Sources */,
 				EF9761E11FBFC4F30099CABF /* CreateMemoVC.swift in Sources */,
 				EF93CAE41FBFC73A0057ED46 /* UIViewController+.swift in Sources */,
 				EF9761D71FBFBC670099CABF /* UIColor+.swift in Sources */,
 				EF9761C31FBFBB0A0099CABF /* AppDelegate.swift in Sources */,
+				EF93CAF11FBFE1640057ED46 /* YSTableViewCell.swift in Sources */,
 				EF93CAED1FBFD8850057ED46 /* Memo.swift in Sources */,
 				EF93CAEA1FBFCFA80057ED46 /* YSView.swift in Sources */,
 				EF9761D51FBFBC5E0099CABF /* StyleGuide.swift in Sources */,
