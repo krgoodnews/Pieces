@@ -38,15 +38,33 @@ class MemoListVC: UITableViewController {
 	
 	/// createMemoVC로 이동
 	@objc private func didTapAdd() {
+		
+		// 어떤 타입의 메모를 작성할까요
+		let actionSheet = UIAlertController(title: "What type?", message: nil, preferredStyle: .actionSheet)
+		let textAction = UIAlertAction(title: MemoType.Text.rawValue, style: .default) { (action) in
+			self.presentCreateMemoVC(type: .Text)
+		}
+		let imgAction = UIAlertAction(title: MemoType.Image.rawValue, style: .default) { (action) in
+			self.presentCreateMemoVC(type: .Image)
+		}
+		actionSheet.addAction(textAction)
+		actionSheet.addAction(imgAction)
+		
+		present(actionSheet, animated: true, completion: nil)
+		
+		
+	}
+	
+	private func presentCreateMemoVC(type: MemoType) {
 		let createMemoVC = CreateMemoVC()
 		createMemoVC.delegate = self
-		createMemoVC.memoType = .Text
+		createMemoVC.memoType = type
 		
 		let naviVC = CustomNavigationController(rootViewController: createMemoVC)
 		
 		present(naviVC, animated: true, completion: nil)
-		
 	}
+	
 	
 	// MARK: TableView
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
