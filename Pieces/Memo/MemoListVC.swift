@@ -47,12 +47,11 @@ class MemoListVC: UITableViewController {
 		let imgAction = UIAlertAction(title: MemoType.Image.rawValue, style: .default) { (action) in
 			self.presentCreateMemoVC(type: .Image)
 		}
+		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
 		actionSheet.addAction(textAction)
 		actionSheet.addAction(imgAction)
-		
+		actionSheet.addAction(cancelAction)
 		present(actionSheet, animated: true, completion: nil)
-		
-		
 	}
 	
 	private func presentCreateMemoVC(type: MemoType) {
