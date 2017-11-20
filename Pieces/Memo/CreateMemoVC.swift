@@ -23,6 +23,7 @@ class CreateMemoVC: UIViewController {
 	var memoType: MemoType? {
 		didSet {
 			guard let type = memoType else { return }
+			self.displayView.setupView(memoType: type)
 			switch type {
 			case .Text:
 				navigationItem.title = "Write piece"
@@ -41,7 +42,6 @@ class CreateMemoVC: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		view.backgroundColor = .greenery
 		
 		let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(didTapSave))
 		navigationItem.rightBarButtonItem = saveButton

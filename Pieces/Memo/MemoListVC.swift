@@ -31,7 +31,7 @@ class MemoListVC: UITableViewController {
 		let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
 		navigationItem.rightBarButtonItem = addButton
 		
-		tableView.backgroundColor = .stem
+		tableView.backgroundColor = .fresh
 		//		tableView.separatorStyle = .none
 		tableView.register(MemoCell.self, forCellReuseIdentifier: cellID)
 	}

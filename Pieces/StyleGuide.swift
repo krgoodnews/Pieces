@@ -26,6 +26,16 @@ extension UIColor {
 	static let stem = UIColor("636B46")
 	static let greenery = UIColor("373F27")
 	
+	static let dusty = UIColor("96868F")
+	static let lavendar = UIColor("6D7993")
+	static let overcast = UIColor("9899A2")
+	static let paper = UIColor("D5D5D5")
+	
+	static let fresh = UIColor("F7F5E6")
+	static let vermillion = UIColor("333A56")
+	static let sunshine = UIColor("52658F")
+	static let clean = UIColor("E8E8E8")
+	
 }
 
 extension UIFont {

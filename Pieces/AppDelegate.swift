@@ -16,14 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		
-		UINavigationBar.appearance().tintColor = .daisy
+		UINavigationBar.appearance().tintColor = .clean
 		UINavigationBar.appearance().isTranslucent = false
 		
-		UINavigationBar.appearance().barTintColor = .gold
+		UINavigationBar.appearance().barTintColor = .vermillion
 		UINavigationBar.appearance().prefersLargeTitles = true
 		
-		UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.daisy]
-		UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.daisy]
+		UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.clean]
+		UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.clean]
 		
 		UINavigationBar.appearance().shadowImage = UIImage()
 		

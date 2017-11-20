@@ -24,11 +24,11 @@ class MemoCell: YSTableViewCell {
 	
 	let typeImgView = UIImageView(image: nil).then {
 		$0.contentMode = .scaleAspectFit
-		$0.backgroundColor = .gold
+		$0.backgroundColor = .vermillion
 	}
 	
 	let titleLabel = UILabel().then {
-		$0.textColor = .greenery
+		$0.textColor = .vermillion
 		$0.font = .body
 		$0.numberOfLines = 0
 	}
@@ -37,27 +37,28 @@ class MemoCell: YSTableViewCell {
 		$0.text = "00.00.00."
 		$0.font = .systemFont(ofSize: 12)
 		$0.textColor = .lightGray
+		$0.alpha = 0.5
 	}
 	override func setupView() {
 		super.setupView()
-		backgroundColor = .daisy
+		backgroundColor = .fresh
 
 		addSubview(titleLabel)
+		addSubview(typeImgView)
+		addSubview(dateLabel)
+		
 		titleLabel.snp.remakeConstraints { make -> Void in
 			make.top.right.equalTo(self).inset(8)
-			make.left.equalTo(self).offset(16)
+			make.left.equalTo(typeImgView.snp.right).offset(10)
 //			make.bottom.equalTo(self).offset(-44)
 		}
 
-	
-		addSubview(typeImgView)
 		typeImgView.snp.remakeConstraints { make -> Void in
 			make.top.bottom.equalTo(self)
-			make.right.equalTo(titleLabel.snp.left).offset(-8)
-			make.width.equalTo(8)
+			make.left.equalTo(self)
+			make.width.equalTo(6)
 		}
 		
-		addSubview(dateLabel)
 		dateLabel.snp.remakeConstraints { make -> Void in
 			make.top.equalTo(titleLabel.snp.bottom).offset(6)
 			make.right.bottom.equalTo(self).inset(4)

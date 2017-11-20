@@ -13,7 +13,7 @@ import Then
 class YSView: UIView {
 	
 	func setupView() {
-		backgroundColor = .stem
+		backgroundColor = .clean
 	}
 	
 	override init(frame: CGRect) {
