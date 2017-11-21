@@ -75,6 +75,7 @@ class CreateMemoVC: UIViewController {
 			self.delegate?.didAddMemo(memo: memo)
 		}
 	}
+	
 	private func setupNavi() {
 		setupCancelButton()
 	}
@@ -84,6 +85,7 @@ class CreateMemoVC: UIViewController {
 		view = displayView
 	}
 	
+
 	@objc private func didTapClose() {
 		dismiss(animated: true, completion: nil)
 	}

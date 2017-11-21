@@ -28,10 +28,12 @@ class CreateMemoView: YSView {
 		$0.placeholder = "Text here..."
 		$0.textColor = .vermillion
 	}
-	lazy var imgButton = UIImageView(image: nil).then {
+	lazy var imgView = UIImageView(image: nil).then {
 		$0.translatesAutoresizingMaskIntoConstraints = false
 		$0.isUserInteractionEnabled = true
-		$0.backgroundColor = .red
+		$0.layer.borderWidth = 1
+		$0.layer.borderColor = UIColor.vermillion.cgColor
+		$0.layer.cornerRadius = 8
 		$0.contentMode = .scaleAspectFit
 		$0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapImg)))
 	}
@@ -73,14 +75,15 @@ class CreateMemoView: YSView {
 			addSubview(freshBackgroundView)
 			addSubview(titleLabel)
 			addSubview(textField)
-			addSubview(imgButton)
+			addSubview(imgView)
+			
 			
 //			let width = UIWindow().frame.width
 			changeFreshViewHeight(150 + 50) // 16:9 가로사진에 어울리게?
-			imgButton.snp.remakeConstraints { make -> Void in
+			imgView.snp.remakeConstraints { make -> Void in
 				make.top.equalTo(self).offset(16)
 				make.bottom.equalTo(titleLabel.snp.top).offset(-16)
-				make.width.equalTo(imgButton.snp.height).multipliedBy(16 / 9.0)
+				make.width.equalTo(imgView.snp.height).multipliedBy(16 / 9.0)
 				make.centerX.equalTo(self)
 			}
 			
@@ -100,6 +103,8 @@ class CreateMemoView: YSView {
 
 		}
 	}
+	
+
 	
 	func changeFreshViewHeight(_ height: CGFloat) {
 		freshBackgroundView.snp.remakeConstraints { make -> Void in
