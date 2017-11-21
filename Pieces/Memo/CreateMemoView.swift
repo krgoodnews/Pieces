@@ -28,7 +28,18 @@ class CreateMemoView: YSView {
 		$0.placeholder = "Text here..."
 		$0.textColor = .vermillion
 	}
+	lazy var imgButton = UIImageView(image: nil).then {
+		$0.translatesAutoresizingMaskIntoConstraints = false
+		$0.isUserInteractionEnabled = true
+		$0.backgroundColor = .red
+		$0.contentMode = .scaleAspectFit
+		$0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapImg)))
+	}
 	
+	
+	@objc private func didTapImg() {
+		print("trying load library...")
+	}
 	override func setupView() {
 		super.setupView()
 		
@@ -62,9 +73,16 @@ class CreateMemoView: YSView {
 			addSubview(freshBackgroundView)
 			addSubview(titleLabel)
 			addSubview(textField)
+			addSubview(imgButton)
 			
-			let width = UIWindow().frame.width
-			changeFreshViewHeight((width / 16 * 9) + 50) // 16:9 가로사진에 어울리게?
+//			let width = UIWindow().frame.width
+			changeFreshViewHeight(150 + 50) // 16:9 가로사진에 어울리게?
+			imgButton.snp.remakeConstraints { make -> Void in
+				make.top.equalTo(self).offset(16)
+				make.bottom.equalTo(titleLabel.snp.top).offset(-16)
+				make.width.equalTo(imgButton.snp.height).multipliedBy(16 / 9.0)
+				make.centerX.equalTo(self)
+			}
 			
 			titleLabel.snp.remakeConstraints { make -> Void in
 //				make.top.equalTo(freshBackgroundView).offset(160)
@@ -78,6 +96,8 @@ class CreateMemoView: YSView {
 				make.bottom.right.equalTo(freshBackgroundView)
 				make.left.equalTo(titleLabel.snp.right)
 			}
+			
+
 		}
 	}
 	
