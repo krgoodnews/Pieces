@@ -81,8 +81,8 @@ class CreateMemoView: YSView {
 //			let width = UIWindow().frame.width
 			changeFreshViewHeight(150 + 50) // 16:9 가로사진에 어울리게?
 			imgView.snp.remakeConstraints { make -> Void in
-				make.top.equalTo(self).offset(16)
-				make.bottom.equalTo(titleLabel.snp.top).offset(-16)
+				make.top.equalTo(self).offset(12)
+				make.bottom.equalTo(titleLabel.snp.top)
 				make.width.equalTo(imgView.snp.height).multipliedBy(16 / 9.0)
 				make.centerX.equalTo(self)
 			}
